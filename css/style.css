@@ -24,6 +24,38 @@ body {
     background-size: cover;
 }
 
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 42px;
+    height: 42px;
+    border: 4px solid var(--accent);
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .container {
     max-width: 1230px;
     margin: 0 auto;
@@ -155,7 +187,6 @@ body {
     }
 }
 
-/*  Notifications */
 .notifications {
     position: fixed;
     top: 30px;
@@ -185,12 +216,13 @@ body {
 }
 
 .notification__title {
-    font-size: 22px;
     font-weight: 600;
+    margin-bottom: 2px;
 }
 
 .notification__subtitle {
     color: #b7b6b6;
+    text-wrap: balance;
 }
 
 .notification::before {

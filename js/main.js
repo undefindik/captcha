@@ -1,5 +1,11 @@
 import createNotification from "./modules/notification.js"
 
+
+window.addEventListener('load', () => {
+    document.querySelector('.preloader')?.classList.add('hidden')
+})
+
+
 const captcha = document.querySelector('#captcha')
 const form = document.querySelector('.captcha-form')
 const captchaField = document.querySelector('#captcha-field')

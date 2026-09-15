@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✅ Капча</title>
+    <title>Captcha</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-
     <link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
 </head>
 <body>
+
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
 
     <div class="wrapper">
         <div class="captcha">
@@ -21,9 +24,9 @@
                 <div class="captcha-content">
                     <p class="captcha__subtitle">Чтобы подтвердить, что вы не робот, введите текст с картинки:</p>
                     <div class="captcha-preview">
-                        <p class="captcha-preview__code" id="captcha">ZKqW3Kxj</p>
+                        <p class="captcha-preview__code" id="captcha"></p>
                     </div>
-                    <form class="captcha-form" action="">
+                    <form class="captcha-form">
                         <input class="captcha-input" id="captcha-field" type="text" placeholder="Текст с картинки">
                         <button class="captcha-change" id="captcha-change" type="reset">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +43,6 @@
 
     <div class="notifications">
     </div>
-
 
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="js/modules/notification.js"></script>
